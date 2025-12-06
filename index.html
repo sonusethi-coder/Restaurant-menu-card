@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant Menu</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+  <h1>🍽 Delicious Bites Restaurant</h1>
+</header>
+
+<div class="container">
+
+  
+      <div class="left-menu" id="menu">
+        <h3 onclick="showCategory('starters')">Starters</h3>
+        <h3 onclick="showCategory('breakfast')">Breakfast</h3>
+        <h3 onclick="showCategory('lunch')">Lunch</h3>
+        <h3 onclick="showCategory('beverages')">Beverages</h3>
+        <h3 onclick="showCategory('Desserts')">Desserts</h3>
+      </div>
+
+    <div class="center-box" id="menuBox">
+    <span id="closeBtn" onclick="hideItems()">✖</span>
+
+
+     <div class="category" id="starters">
+      <h2>Starter</h2>
+       <div id="grid">
+        <div class="item-card" >
+          <img src="img/spring_rolls.jpg">
+          <div class="info">
+            <h4>Spring Rolls</h4>
+            <p>₹120</p>
+          </div>
+          <button onclick="addToCart('Spring Rolls', 120, 'img/spring_rolls.jpg')">Add</button>
+
+        </div>
+
+        <div class="item-card">
+          <img src="img/paneer_tikka.jpg">
+          <div class="info">
+            <h4>Paneer Tikka</h4>
+            <p>₹130</p>
+          </div>
+          <button onclick="addToCart('Paneer Tikka', 130, 'img/paneer_tikka.jpg')">Add</button>
+        </div>
+
+        <div class="item-card">
+          <img src="img/fish_fingers.jpg">
+          <div class="info">
+            <h4>Fish Fingers</h4>
+            <p>₹200</p>
+          </div>
+          <button onclick="addToCart('Fish Fingers', 200, 'img/fish_fingers.jpg')">Add</button>
+        </div>
+
+        <div class="item-card">
+          <img src="img/Hara Bhara Kebabs.jpeg">
+          <div class="info">
+            <h4>Hara Bhara Kebabs</h4>
+            <p>₹180</p>
+          </div>
+          <button onclick="addToCart('Hara Bhara Kebabs', 180, 'img/Hara Bhara Kebabs.jpeg')">Add</button>
+        </div>
+
+        <div class="item-card">
+          <img src="img/Stuffed Mushrooms.jpeg">
+          <div class="info">
+            <h4>Stuffed Mushrooms</h4>
+            <p>₹150</p>
+          </div>
+          <button onclick="addToCart('Stuffed Mushrooms', 150, 'img/Stuffed Mushrooms.jpeg')">Add</button>
+        </div>
+
+        <div class="item-card">
+          <img src="img/Aloo Tikki.jpeg">
+          <div class="info">
+            <h4>Aloo Tikki</h4>
+            <p>₹110</p>
+          </div>
+          <button onclick="addToCart('Aloo Tikki', 110, 'img/Aloo Tikki.jpeg')">Add</button>
+        </div>
+
+        <div class="item-card">
+          <img src="img/Bruschetta.jpeg">
+          <div class="info">
+            <h4>Bruschetta</h4>
+            <p>₹170</p>
+          </div>
+          <button onclick="addToCart('Bruschetta', 170,'img/Bruschetta.jpeg')">Add</button>
+        </div>
+
+        <div class="item-card">
+          <img src="img/Chicken 65.jpeg">
+          <div class="info">
+            <h4>Chicken 65</h4>
+            <p>₹250</p>
+          </div>
+          <button onclick="addToCart('Chicken 65', 250, 'img/Chicken 65.jpeg')">Add</button>
+        </div>
+
+        <div class="item-card">
+          <img src="img/Chicken Wings.jpeg">
+          <div class="info">
+            <h4>Chicken Wings</h4>
+            <p>₹230</p>
+          </div>
+          <button onclick="addToCart('Chicken Wings', 230, 'img/Chicken Wings.jpeg')">Add</button>
+        </div>
+
+        <div class="item-card">
+          <img src="img/prawn masala.jpeg">
+          <div class="info">
+            <h4>Prawn masala</h4>
+            <p>₹230</p>
+          </div>
+          <button onclick="addToCart('Prawn masala', 230, 'img/prawn masala.jpeg')">Add</button>
+        </div>
+
+      </div>
+     </div>
+
+   
+
+    <div class="category" id="breakfast">
+      <h2>Breakfast</h2>
+     <div id="grid">
+      <div class="item-card">
+        <img src="img/sandwich.jpg">
+        <div class="info">
+          <h4>Sandwiches</h4>
+          <p>₹100</p>
+        </div>
+        <button onclick="addToCart('Sandwiches', 100, 'img/sandwich.jpg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/egg_sandwich.jpg">
+        <div class="info">
+          <h4>Egg Sandwich</h4>
+          <p>₹70</p>
+        </div>
+        <button onclick="addToCart('Egg Sandwich', 70, 'img/egg_sandwich.jpg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Poha.jpeg">
+        <div class="info">
+          <h4>Poha</h4>
+          <p>₹80</p>
+        </div>
+        <button onclick="addToCart('Poha', 80, 'img/Poha.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Avocado Toast.jpeg">
+        <div class="info">
+          <h4>Avocado Toast</h4>
+          <p>₹180</p>
+        </div>
+        <button onclick="addToCart('Avocado Toast', 180, 'img/Avocado Toast.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Egg and Chicken Cheese Chili Toast.jpeg">
+        <div class="info">
+          <h4>Egg and Chicken Cheese Chili Toast</h4>
+          <p>₹150</p>
+        </div>
+        <button onclick="addToCart('Egg and Chicken Cheese Chili Toast', 150, 'img/Egg and Chicken Cheese Chili Toast.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Waffles.jpeg">
+        <div class="info">
+          <h4>Waffles</h4>
+          <p>₹150</p>
+        </div>
+        <button onclick="addToCart('Waffles', 150, 'img/Waffles.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Porridge.jpeg">
+        <div class="info">
+          <h4>Porridge</h4>
+          <p>₹170</p>
+        </div>
+        <button onclick="addToCart('Porridge', 170, 'img/Porridge.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Bagels.jpeg">
+        <div class="info">
+          <h4>Bagels</h4>
+          <p>₹120</p>
+        </div>
+        <button onclick="addToCart('Bagels', 120, 'img/Bagels.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Oatmeal.jpeg">
+        <div class="info">
+          <h4>Oatmeal</h4>
+          <p>₹130</p>
+        </div>
+        <button onclick="addToCart('Oatmeal', 130, 'img/Oatmeal.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Maggi.jpeg">
+        <div class="info">
+          <h4>Maggi</h4>
+          <p>₹80</p>
+        </div>
+        <button onclick="addToCart('Maggi', 80, 'img/Maggi.jpeg')">Add</button>
+      </div>
+     </div>
+
+    </div>
+
+    <div class="category" id="lunch">
+      <h2>Lunch</h2>
+     <div id="grid">
+      <div class="item-card">
+        <img src="img/paneer_butter.jpg">
+        <div class="info">
+          <h4>Paneer Butter Masala</h4>
+          <p>₹200</p>
+        </div>
+        <button onclick="addToCart('Paneer Butter Masala', 200, 'img/paneer_butter.jpg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Malai Kofta.jpeg">
+        <div class="info">
+          <h4>Malai Kofta</h4>
+          <p>₹160</p>
+        </div>
+        <button onclick="addToCart('Malai Kofta', 160, 'img/Malai Kofta.jpeg')">Add</button>
+      </div>
+
+       <div class="item-card">
+        <img src="img/Palak Matar.jpeg">
+        <div class="info">
+          <h4>Palak Matar</h4>
+          <p>₹120</p>
+        </div>
+        <button onclick="addToCart('Palak Matar', 120, 'img/Palak Matar.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Keema Paratha.jpeg">
+        <div class="info">
+          <h4>Keema Paratha</h4>
+          <p>₹100</p>
+        </div>
+        <button onclick="addToCart('Keema Paratha', 100, 'img/Keema Paratha.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/veg_biryani.jpg">
+        <div class="info">
+          <h4>Veg Biryani</h4>
+          <p>₹180</p>
+        </div>
+        <button onclick="addToCart('Veg Biryani', 180, 'img/veg_biryani.jpg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Chicken Biryani.jpeg">
+        <div class="info">
+          <h4>Chicken Biryani</h4>
+          <p>₹200</p>
+        </div>
+        <button onclick="addToCart('Chicken Biryani', 200, 'img/Chicken Biryani.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Chicken Tikka Masala.jpeg">
+        <div class="info">
+          <h4>Chicken Tikka Masala</h4>
+          <p>₹200</p>
+        </div>
+        <button onclick="addToCart('Chicken Tikka Masala', 200, 'img/Chicken Tikka Masala.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Spinach Paratha.jpeg">
+        <div class="info">
+          <h4>Spinach Paratha with Yogurt</h4>
+          <p>₹200</p>
+        </div>
+        <button onclick="addToCart('Spinach Paratha with Yogurt', 200, 'img/Spinach Paratha.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Butter naan.jpeg">
+        <div class="info">
+          <h4>Butter naan</h4>
+          <p>₹150</p>
+        </div>
+        <button onclick="addToCart('Butter naan', 150, 'img/Butter naan.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Indian Thalis.jpeg">
+        <div class="info">
+          <h4>Indian Thalis</h4>
+          <p>₹200</p>
+        </div>
+        <button onclick="addToCart('Indian Thalis', 200, 'img/Indian Thalis.jpeg')">Add</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="category" id="beverages">
+      <h2>Beverages</h2>
+     <div id="grid">
+      <div class="item-card">
+        <img src="img/cold_coffee.jpg">
+        <div class="info">
+          <h4>Cold Coffee</h4>
+          <p>₹150</p>
+        </div>
+        <button onclick="addToCart('Cold Coffee', 150, 'img/cold_coffee.jpg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Tea.jpeg">
+        <div class="info">
+          <h4>Tea</h4>
+          <p>₹50</p>
+        </div>
+        <button onclick="addToCart('Tea', 50, 'img/Tea.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Coffee.jpeg">
+        <div class="info">
+          <h4>Coffee</h4>
+          <p>₹90</p>
+        </div>
+        <button onclick="addToCart('Coffee', 90, 'img/Coffee.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/lemon_soda.jpg">
+        <div class="info">
+          <h4>Lemon Soda</h4>
+          <p>₹70</p>
+        </div>
+        <button onclick="addToCart('Lemon Soda', 70, 'img/lemon_soda.jpg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Cocktails.jpeg">
+        <div class="info">
+          <h4>Cocktails</h4>
+          <p>₹300</p>
+        </div>
+        <button onclick="addToCart('Cocktails', 300, 'img/Cocktails.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Smoothie.jpeg">
+        <div class="info">
+          <h4>Smoothie</h4>
+          <p>₹180</p>
+        </div>
+        <button onclick="addToCart('Smoothie', 180, 'img/Smoothie.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Daiquiri.jpeg">
+        <div class="info">
+          <h4>Daiquiri</h4>
+          <p>₹200</p>
+        </div>
+        <button onclick="addToCart('Daiquiri', 200, 'img/Daiquiri.jpeg')">Add</button>
+      </div>
+
+       <div class="item-card">
+        <img src="img/Red Bull.jpeg">
+        <div class="info">
+          <h4>Red Bull</h4>
+          <p>₹200</p>
+        </div>
+        <button onclick="addToCart('Red Bull', 200, 'img/Red Bull.jpeg')">Add</button>
+      </div>
+
+        <div class="item-card">
+          <img src="img/Diet Coke.jpeg">
+          <div class="info">
+            <h4>Diet Coke</h4>
+            <p>₹50</p>
+              </div>
+              <button onclick="addToCart('Diet Coke', 50, 'img/Diet Coke.jpeg')">Add</button>
+            </div>
+
+      <div class="item-card">
+        <img src="img/Water.jpeg">
+        <div class="info">
+          <h4>Water</h4>
+          <p>₹50</p>
+          </div>
+          <button onclick="addToCart('Water', 50, 'img/Water.jpeg')">Add</button>
+        </div>
+      </div>
+
+    </div>
+
+    
+      <div class="category" id="Desserts">
+        <h2>Desserts</h2>
+      <div id="grid">
+      <div class="item-card">
+        <img src="img/Cookies.jpeg">
+        <div class="info">
+          <h4>Cookies</h4>
+          <p>₹90</p>
+        </div>
+        <button onclick="addToCart('Cookies', 90, 'img/Cookies.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Cakes.jpeg">
+        <div class="info">
+          <h4>Cakes</h4>
+          <p>₹300</p>
+        </div>
+        <button onclick="addToCart('Cakes', 300, 'img/Cakes.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Chocolate brownie.jpeg">
+        <div class="info">
+          <h4>Chocolate brownie</h4>
+          <p>₹160</p>
+        </div>
+        <button onclick="addToCart('Chocolate brownie', 160, 'img/Chocolate brownie.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Pudding.jpeg">
+        <div class="info">
+          <h4>Pudding</h4>
+          <p>₹190</p>
+        </div>
+        <button onclick="addToCart('Pudding', 190, 'img/Pudding.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Cheesecake.jpeg">
+        <div class="info">
+          <h4>Cheesecake</h4>
+          <p>₹120</p>
+        </div>
+        <button onclick="addToCart('Cheesecake', 120, 'img/Cheesecake.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Ice cream.jpg">
+        <div class="info">
+          <h4>Ice cream</h4>
+          <p>₹200</p>
+        </div>
+         <button onclick="addToCart('Ice cream', 200, 'img/Ice cream.jpg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Apple crisp.jpeg">
+        <div class="info">
+          <h4>Apple crisp</h4>
+          <p>₹170</p>
+        </div>
+        <button onclick="addToCart('Apple crisp', 170, 'img/Apple crisp.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Pecan pie.jpeg">
+        <div class="info">
+          <h4>Pecan pie</h4>
+          <p>₹190</p>
+        </div>
+        <button onclick="addToCart('Pecan pie', 190, 'img/Pecan pie.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Banana trifle.jpeg">
+        <div class="info">
+          <h4>Banana trifle</h4>
+          <p>₹240</p>
+        </div>
+        <button onclick="addToCart('Banana trifle', 240, 'img/Banana trifle.jpeg')">Add</button>
+      </div>
+
+      <div class="item-card">
+        <img src="img/Pastries.jpeg">
+        <div class="info">
+          <h4>Pastries</h4>
+          <p>₹90</p>
+        </div>
+        <button onclick="addToCart('Pastries', 90, 'img/Pastries.jpeg')">Add</button>
+          </div>
+        </div>
+          </div>
+        </div>
+  
+
+  <div id="cart">
+    <h3>Your Cart</h3>
+    <div id="bill">
+      <ul id="cart-items"></ul>
+      <h3>Total: ₹<span id="total">0</span></h3>
+    </div>
+    <div id="checkbtn">
+    <button id="check" onclick="click()">Check Out</button>
+  </div>
+  </div>
+
+</div>
+<div id="Order">
+  <form  id="form">
+  <label id="size">Username:</label><br>
+  <input type="text" name="username" id="size" placeholder="Enter your name" required>
+  <br><br>
+
+  <label id="size">Contact Number:</label><br>
+  <input type="text" name="contact" id="size" placeholder="Enter your phone number" required>
+  <br><br>
+
+  <div id="adrs">
+  <br>
+  <br>
+  <div>
+
+  <label>Village/City Name</label><br>
+  <input type="text" name="Village/City Name" id="size1" placeholder="Enter Your Village/City Name" required></textarea>
+  <br><br>
+
+    <label>Street Name</label><br>
+  <input type="text" name="Street Name" id="size1" placeholder="Enter Your Street Name" required></textarea>
+  <br><br>
+
+  <label>House No.</label><br>
+  <input type="text" name="House No" id="size1" placeholder="Enter Your House No." required></textarea>
+  <br><br>
+
+</div>
+
+<div>
+
+  <label>District Name</label><br>
+  <input type="text" name="District Name" id="size1" placeholder="Enter Your District Name" required></textarea>
+  <br><br>
+
+  <label>State Name</label><br>
+  <input type="text" name="State Name" id="size1" placeholder="Enter Your State Name" required></textarea>
+  <br><br>
+   
+  <label>Pincode</label><br>
+  <input type="text" name="Pincode" id="size1" placeholder="Enter Your Pincode" required></textarea>
+  <br><br>
+</div>
+</div>  
+  <button id="placeorder" onclick="thnx()">Place Order</button>
+</form>
+
+<div id="OrderSummary">
+  <h2>Your Oreder Summary</h2>
+  
+    <table id="tble" style="height: 100%; overflow-y: auto;">
+    <thead>
+      <tr>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Price </th>
+    <th>Subtotal</th>
+      </tr>
+    </thead>
+    
+    <tbody id="SummaryBody">
+
+    </tbody>
+
+  </table>
+  
+<h2>Total = <span id="SummaryToatal"></span></h2>
+
+</div>
+  </div>
+
+<script src="menu.js"></script>
+</body>
+</html>
